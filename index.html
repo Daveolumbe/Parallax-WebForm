@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>{yourzine}</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css"   charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/fractionslider.css" />
+</head>
+
+	<body  ng-app="validationApp" ng-controller="mainController">
+		<div class="container">
+				<!--Top header Bar -->
+		   <header class="headcontainer">
+				<div class="nav2">
+					<ul>
+						<a href="#"><li>partners</li></a>
+						<a href="#"><li>nieuws</li></a>
+						<a href="#"><li>vacatures</li></a>
+						<a href="#"><li>contact</li></a>
+					</ul>
+				</div>
+			</header>
+
+				<!--Second header Bar -->
+			<div class="headcontainer">		
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" class="img-responsive" width="130px" hieght="40px" alt="yourzine logo"/></a>
+				</div>
+				<div class="nav navbar-default">
+					<ul>
+						<a href="#" class="active"><li>home</li></a>
+						<a href="#"><li>over ons</li></a>
+						<a href="#"><li>cases</li></a>
+						<a href="#"><li>mensen</li></a>
+						<a href="#"><li>blog</li></a>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+<!--Content before parallax slider -->
+<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					Curabitur ut augue nisi. <span class="textcol">Mauris eleifend aliquamen pharetra. Praesent non augue ac massa molestie er imperdiet ut sed mauris. Cras vel lacinia et magna. Fusce lobortis facilisis sem, quis mattis arcu.</span></div>
+			</div>
+		</div>
+<section id="sub">
+<div class="slider-wrapper">
+	<div class="responisve-container">
+		<div class="slider">
+					<div class="fs_loader"></div>
+
+			<div class="slide parallax_bg">
+
+				<img src="images/par1.png"style="width:auto; height:auto" class="img-responsive" data-in="left" data-delay="40"  data-out="right" data-position="0,0" >
+
+				<img src="images/para3slow.png" style="width:auto; height:auto" class="img-responsive" data-in="bottomLeft" data-delay="0" data-out="right" delay="50" data-position="0,0" >
+								
+				<img src="images/para2medium.png" class="img-responsive" style="width:auto; height:auto" data-in="topRight" data-delay="0"  data-out="right" data-position="0,0" >
+							
+				<img src="images/text2.png" class="img-responsive" data-position="100,150" data-in="bottomRight" data-out="right"  data-delay="10" />
+						
+				<img src="images/text1.png" class="img-responsive" style="width:auto; height:auto"	data-position="0,150" data-in="Right" data-out="left"  data-delay="10" />
+			</div>					
+		</div>
+	</div>
+</div>
+</section>
+<div class="container well" id="formsection">
+<div class="row">
+	<div class="col-md-6">
+		<h3>uw gegeven</h3>
+						<form class="form-group" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+							<div class="col-md-12" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+							  <label class="control-label" for="inputSuccess1">Voomaam <span class="textcol">*</span> </label>
+							  <input type="text" class="form-control" name="name" ng-model="user.name" id="voomaamm" required>
+							  <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Voomaam can not be empty.</p>
+							</div>
+
+							<div class="col-md-4">
+							  <label class="control-label" for="inputSuccess1">Tussenvoegsel(s)</label>
+							  <input type="text" class="form-control" >
+							</div>
+							<div class="col-md-8">
+							  <label class="control-label" >Achternaam <span class="textcol">*</span> </label>
+							  <input type="text" class="form-control" name="achternaam" id="achternaam">
+							</div>
+
+							<div class="col-md-12 checkbox">
+      						<label>
+        					<input type="checkbox" name="toggler" value="A" class="toggler" ><span id="checked"> Ik ontvang graag de Yourzine nieuwsbrief
+      						</span></label>
+   						   </div>
+   						   <div id="show">
+   						   <div class="well col-md-12" id="sub" >
+   						   	<div class="col-md-9" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+							  <label class="control-label">E-mail adres <span class="textcol">*</span> </label>
+							  <input type="email" class="form-control" name="email" id="email" class="form-control" ng-model="user.email" />
+							  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+							</div>
+   						   </div>
+   						   </div>
+	</div>
+	<div class="col-md-6">
+					 	<h3>datum en tjdstip</h3>
+							 <p>
+							 	Al onze inspiratiesessies vinden plaats in de ochtend, tussen<br />
+							 	10:00 en 13:00, lunch en koffie worden door ons verzorgd.
+								<br/><br/>
+								Ik laat mij graag inspireren op:
+							 </p>
+		<div class="col-md-6">	
+			<label>Optie 1 <span class="textcol">*</span> </label>		
+  <select class="form-control" id="optvalue" required>
+  <option value=""></option>
+  <option value="2">28 maart 2013</option>
+  <option value="2">29 maart 2013</option>
+  <option value="2">30 maart 2013</option>
+</select>
+</div>
+
+<div class="col-md-6">	
+			<label>Optie 2 <span class="textcol">*</span> </label>		
+  <select class="form-control" id="optvalue2" required>
+  <option value=""></option>
+  <option value="2">26 april 2013</option>
+  <option value="2">27 april 2013</option>
+  <option value="2">28 april 2013</option>
+</select>
+</div>
+<div class="form-group col-md-12"><br/>						  
+<button class="btn btn-danger" onclick="Validate()" >Verzender</button>
+<br/><br/>
+<p>velden met een <span class="textcol">*</span> zijn verplicht</p>
+					</div>
+</div>
+</div>
+</div>
+
+<div class="container well" id="success">
+<div class="row">
+	<div class="col-md-12">
+<h1>bevestiging</h1>
+<p>Er is een bevestigings e-mail verstuurd naar jouw adres.</p>
+	</div>
+	</div>
+	</div>
+    </div>
+
+
+<footer class="">
+    <div class="container-fluid">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-6"><img src="images/socialmedia.png"><br />
+    			<p style="color:#fff;">Code Email Privacy statement </br>
+        2013 Yourzine / Yourzine is onderdeel van de LECTRIC GROEP</p>
+    		</div>
+    		<div class="col-md-6 text-right"><img src="images/fbandtwit.png"></div>
+    	</div>
+    </div>
+
+
+</footer>
+
+			<script src="js/jquery-1.9.0.min.js"></script>
+
+			<!-- Include all compiled plugins (below), or include individual files as needed --> 
+		<script src="js/bootstrap.js"></script>
+		<script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
+    <script src="formvalidation.js"></script>
+		<script src="js/formvalidation.js"></script>
+		<script src="js/paralax.js"></script>
+		<script src="js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
