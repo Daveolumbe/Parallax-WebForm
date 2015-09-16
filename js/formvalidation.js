@@ -37,22 +37,54 @@ function Validate(userForm) {
 	var optvalueerror2 = document.getElementById("optvalue2").value;
 
 
-	if (voomaamerror === "" || achternaaerror === "" || emailerror === "" || optvalueerror === "" || optvalueerror2 === "" ) {
+	if (voomaamerror === "") {
 		document.getElementById("voomaamm").style.borderColor  = "#ec1e52";
-		document.getElementById("achternaam").style.borderColor  = "#ec1e52";
-		document.getElementById("checked").style.color  = "#ec1e52";
-		document.getElementById("optvalue").style.borderColor  = "#ec1e52";
-		document.getElementById("optvalue2").style.borderColor  = "#ec1e52";
-
-		return false;
 	}
 
-	else{
+
+	else if (voomaamerror != ""){
+		document.getElementById("voomaamm").style.borderColor  = "";
+
+	}
+
+	 if (achternaaerror === ""){
+		document.getElementById("achternaam").style.borderColor  = "#ec1e52";
+	}
+
+	else if (achternaaerror != ""){
+		document.getElementById("achternaam").style.borderColor  = "";
+	}
+
+	 if (optvalueerror === ""){
+		document.getElementById("optvalue").style.borderColor  = "#ec1e52";
+	}
+
+	else if (optvalueerror != ""){
+		document.getElementById("optvalue").style.borderColor  = "";
+	}
+
+	 if (optvalueerror2 === ""){
+		document.getElementById("optvalue2").style.borderColor  = "#ec1e52";
+	}
+
+	else if (optvalueerror2 != ""){
+		document.getElementById("optvalue2").style.borderColor  = "";	
+
+	}
+	if (emailerror === ""){
+ 		document.getElementById("checked").style.color  = "#ec1e52";
+	}
+
+	else if (emailerror != ""){
+		document.getElementById("checked").style.color  = "";
+	}
+
+
+	if (voomaamerror != "" && achternaaerror != "" && emailerror != "" && optvalueerror != "" && optvalueerror2 != "" ){
 
 		document.getElementById("formsection").style.display  = "none";
 		document.getElementById("success").style.display  = "block";
-
- 	 
 	}
+
 
 };
